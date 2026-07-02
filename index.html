@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- ===============================================
+         Atlas Toolkit v1.0
+         File: index.html
+
+         Homepage
+         =============================================== -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Atlas Toolkit</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+        <!-- ===============================================
+         NAVIGATION BAR
+         =============================================== -->
+
+<div class="navbar">
+
+    <!-- Left: Brand -->
+    <div class="nav-brand" onclick="window.location.href='index.html'">
+        Atlas Toolkit
+    </div>
+
+    <!-- Right: Dropdowns -->
+    <div class="nav-right">
+
+        <div class="dropdown">
+
+            <div class="dropdown-title"
+                onclick="toggleDropdown(this)">
+                Tools ▼
+            </div>
+
+            <div class="dropdown-menu">
+
+                <div class="dropdown-item"
+                    onclick="window.location.href='final.html'">
+
+                    Final Grade Calculator
+
+                </div>
+
+                <div class="dropdown-item"
+                    onclick="window.location.href='gpa.html'">
+
+                    Semester GPA Calculator
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="dropdown">
+
+            <div class="dropdown-title"
+                onclick="toggleDropdown(this)">
+                Resources ▼
+            </div>
+
+            <div class="dropdown-menu">
+
+                <div class="dropdown-item">
+                    Study Tips
+                </div>
+
+                <div class="dropdown-item">
+                    Guides
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="app">
+
+    <!-- ===============================================
+         HERO
+         =============================================== -->
+
+    <section class="hero">
+
+        <h1>
+            Everything a student needs
+        </h1>
+
+        <p>
+            Atlas Toolkit is a growing collection of simple, accurate tools
+            designed to help students make smarter academic decisions.
+        </p>
+
+    </section>
+
+
+    <!-- ===============================================
+         TOOL GRID
+         =============================================== -->
+
+    <section class="grid">
+
+        <!-- ===========================
+             Final Grade Calculator
+             =========================== -->
+
+        <div class="tool-card"
+             onclick="openTool('final')">
+
+            <div class="icon">
+                📘
+            </div>
+
+            <div class="tool-title">
+                Final Grade Calculator
+            </div>
+
+            <div class="tool-desc">
+                Find the exact score you need on your final exam.
+            </div>
+
+        </div>
+
+
+        <!-- ===========================
+             GPA Calculator
+             =========================== -->
+
+        <div class="tool-card"
+            onclick="openTool('gpa')">
+
+            <div class="icon">
+                🎓
+            </div>
+
+            <div class="tool-title">
+                Semester GPA Calculator
+            </div>
+
+            <div class="tool-desc">
+                Calculate your weighted semester GPA instantly.
+            </div>
+
+        </div>
+
+
+        <!-- ===========================
+             Tuition Calculator
+             =========================== -->
+
+        <div class="tool-card disabled">
+
+            <div class="icon">
+                💰
+            </div>
+
+            <div class="tool-title">
+                Tuition Calculator
+            </div>
+
+            <div class="tool-desc">
+                Estimate tuition and housing costs.
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- ===============================================
+         FOOTER
+         =============================================== -->
+
+    <footer class="footer">
+
+        Atlas Toolkit
+
+        <br><br>
+
+        Version 1.0.0
+
+    </footer>
+
+</div>
+
+<!-- JavaScript -->
+<script src="script.js"></script>
+
+</body>
+
+</html>

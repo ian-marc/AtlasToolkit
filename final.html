@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- ==================================================
+         Atlas Toolkit v1.0
+         File: final.html
+
+         Final Grade Calculator
+    =================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Final Grade Calculator | Atlas Toolkit
+    </title>
+
+    <!-- Google Font -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Main stylesheet -->
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+
+    <!-- ===========================================
+         NAVIGATION BAR
+    ============================================ -->
+
+<div class="navbar">
+
+    <div class="nav-brand" onclick="goHome()">
+        Atlas Toolkit
+    </div>
+
+    <div class="nav-right">
+
+        <div class="dropdown">
+
+            <div class="dropdown-title"
+                onclick="toggleDropdown(this)">
+                Tools ▼
+            </div>
+
+            <div class="dropdown-menu">
+
+                <div class="dropdown-item"
+                    onclick="window.location.href='final.html'">
+
+                    Final Grade Calculator
+
+                </div>
+
+                <div class="dropdown-item"
+                    onclick="window.location.href='gpa.html'">
+
+                    Semester GPA Calculator
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="dropdown">
+
+            <div class="dropdown-title"
+                onclick="toggleDropdown(this)">
+                Resources ▼
+            </div>
+
+            <div class="dropdown-menu">
+
+                <div class="dropdown-item">
+                    Study Tips
+                </div>
+
+                <div class="dropdown-item">
+                    Guides
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="app">
+
+    <!-- ===========================================
+         HERO
+    ============================================ -->
+
+    <section class="hero">
+
+        <h1>
+
+            Final Grade Calculator
+
+        </h1>
+
+        <p>
+
+            Enter your current grade,
+            your final exam weight,
+            and the grade you'd like to finish
+            the class with.
+
+        </p>
+
+    </section>
+
+
+    <!-- ===========================================
+         CALCULATOR
+    ============================================ -->
+
+    <section class="card">
+
+        <!-- Current Grade -->
+
+        <div class="field">
+
+    <label>Current Grade</label>
+
+            <div class="input-group">
+
+                <input
+                    id="current"
+                    type="number"
+                    placeholder="e.g. 92">
+
+                <span>%</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Final Weight -->
+
+        <div class="field">
+
+    <label>Final Exam Weight</label>
+
+            <div class="input-group">
+
+                <input
+                    id="weight"
+                    type="number"
+                    placeholder="e.g. 25">
+
+                <span>%</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Desired Grade -->
+
+        <div class="field">
+
+    <label>Desired Final Grade</label>
+
+            <div class="input-group">
+
+                <input
+                    id="desired"
+                    type="number"
+                    placeholder="e.g. 90">
+
+                <span>%</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Calculate Button -->
+
+        <button onclick="calculate()">
+
+            Calculate
+
+        </button>
+
+
+        <!-- Results -->
+
+        <div
+            class="result-card"
+            id="resultCard">
+
+            <div
+                class="result"
+                id="result">
+
+                --
+
+            </div>
+
+            <div
+                class="hint"
+                id="hint">
+
+                Fill in the fields above to begin.
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===========================================
+         BACK BUTTON
+    ============================================ -->
+
+    <div
+        style="
+        margin-top:24px;
+        text-align:center;
+        ">
+
+        <button
+
+            onclick="window.location.href='index.html'"
+
+            style="max-width:220px;">
+
+            ← Back to Home
+
+        </button>
+
+    </div>
+
+
+    <!-- ===========================================
+         FOOTER
+    ============================================ -->
+
+    <footer class="footer">
+
+        Atlas Toolkit
+
+        <br>
+
+        Version 1.0.0
+
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
