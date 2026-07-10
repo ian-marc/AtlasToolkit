@@ -1,0 +1,31 @@
+name,type,city,state,website,inState,outState,international,fees,roomBoard
+Boise State University,public,Boise,ID,https://www.boisestate.edu,9789,29477,29477,0,16894
+University of California, Berkeley,public,Berkeley,CA,https://www.berkeley.edu,17002,52480,52480,3898,21168
+University of California, Los Angeles,public,Los Angeles,CA,https://www.ucla.edu,17052,51734,51734,3849,19171
+University of Michigan,public,Ann Arbor,MI,https://umich.edu,18344,60872,60872,3328,14698
+The University of Texas at Austin,public,Austin,TX,https://www.utexas.edu,11908,42978,42978,0,14882
+Harvard University,private,Cambridge,MA,https://www.harvard.edu,59320,59320,59320,4827,20674
+Stanford University,private,Stanford,CA,https://www.stanford.edu,65416,65416,65416,2391,21515
+Yale University,private,New Haven,CT,https://www.yale.edu,67150,67150,67150,0,19450
+Princeton University,private,Princeton,NJ,https://www.princeton.edu,62600,62600,62600,0,20550
+Massachusetts Institute of Technology,private,Cambridge,MA,https://www.mit.edu,61990,61990,61990,406,20140
+Columbia University,private,New York,NY,https://www.columbia.edu,68900,68900,68900,3306,17292
+University of Pennsylvania,private,Philadelphia,PA,https://www.upenn.edu,60698,60698,60698,7798,18864
+Northwestern University,private,Evanston,IL,https://www.northwestern.edu,67222,67222,67222,5379,20440
+Duke University,private,Durham,NC,https://www.duke.edu,69240,69240,69240,2402,19200
+University of Chicago,private,Chicago,IL,https://www.uchicago.edu,67611,67611,67611,2139,19711
+Cornell University,private,Ithaca,NY,https://www.cornell.edu,68400,68400,68400,836,19344
+Pennsylvania State University,public,University Park,PA,https://www.psu.edu,20472,41212,41212,1242,14152
+The Ohio State University,public,Columbus,OH,https://www.osu.edu,13032,39022,39022,1036,14830
+University of Washington,public,Seattle,WA,https://www.washington.edu,12576,43044,43044,1101,18000
+University of Illinois Urbana-Champaign,public,Champaign,IL,https://illinois.edu,18464,38794,38794,3698,15184
+University of Florida,public,Gainesville,FL,https://www.ufl.edu,6381,28659,28659,1904,12920
+University of Wisconsin–Madison,public,Madison,WI,https://www.wisc.edu,11418,41413,41413,1697,14658
+Boston University,private,Boston,MA,https://www.bu.edu,69140,69140,69140,1380,19900
+Northeastern University,private,Boston,MA,https://www.northeastern.edu,66670,66670,66670,1714,19600
+Emory University,private,Atlanta,GA,https://www.emory.edu,62100,62100,62100,950,18972
+Washington University in St. Louis,private,St. Louis,MO,https://www.washu.edu,64600,64600,64600,1310,20440
+University of Southern California,private,Los Angeles,CA,https://www.usc.edu,71364,71364,71364,1939,19306
+Rice University,private,Houston,TX,https://www.rice.edu,62110,62110,62110,825,17900
+Georgetown University,private,Washington,DC,https://www.georgetown.edu,68916,68916,68916,3350,19610
+Vanderbilt University,private,Nashville,TN,https://www.vanderbilt.edu,65408,65408,65408,1600,21340

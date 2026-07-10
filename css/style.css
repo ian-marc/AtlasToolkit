@@ -1,0 +1,1143 @@
+/* =====================================================
+   Atlas Toolkit v1.0
+   Apple-inspired Design System
+   File: style.css
+
+   Author: Atlas Toolkit
+   Purpose:
+   Global styling shared across every page.
+
+===================================================== */
+
+/* =====================================================
+   GOOGLE FONT FALLBACK
+===================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* =====================================================
+   LIGHT THEME
+===================================================== */
+
+:root {
+
+  --bg: #ffffff;
+  --surface: #f8fafc;
+  --surface-2: #ffffff;
+
+  --text: #0f172a;
+  --muted: #64748b;
+
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+
+  --border: #e2e8f0;
+
+  --success: #16a34a;
+  --warning: #ea580c;
+  --danger: #dc2626;
+
+  --shadow:
+      0 10px 30px rgba(15,23,42,.06);
+
+}
+
+/* =====================================================
+   DARK MODE
+===================================================== */
+
+@media (prefers-color-scheme: dark){
+
+:root{
+
+  --bg:#0b1220;
+  --surface:#111827;
+  --surface-2:#172032;
+
+  --text:#f8fafc;
+  --muted:#94a3b8;
+
+  --border:#273449;
+
+  --shadow:
+      0 10px 35px rgba(0,0,0,.45);
+
+}
+
+}
+
+/* =====================================================
+   BASE
+===================================================== */
+
+html{
+
+  scroll-behavior:smooth;
+
+}
+
+body{
+
+  margin:0;
+
+  font-family:
+  "Inter",
+  -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  sans-serif;
+
+  background:var(--bg);
+
+  color:var(--text);
+
+  transition:
+  background .3s,
+  color .3s;
+
+}
+
+/* =====================================================
+   LAYOUT
+===================================================== */
+
+.app{
+
+  max-width:760px;
+
+  margin:auto;
+
+  padding:
+
+  48px
+  24px
+  60px;
+
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.topbar{
+
+  margin-bottom:48px;
+
+}
+
+.brand{
+
+  font-size:34px;
+
+  font-weight:700;
+
+  letter-spacing:-1px;
+
+}
+
+.subtitle{
+
+  margin-top:8px;
+
+  color:var(--muted);
+
+  font-size:15px;
+
+}
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero{
+
+  margin-bottom:36px;
+
+}
+
+.hero h1{
+
+  font-size:40px;
+
+  line-height:1.1;
+
+  letter-spacing:-1.2px;
+
+  margin-bottom:10px;
+
+}
+
+.hero p{
+
+  color:var(--muted);
+
+  font-size:17px;
+
+  line-height:1.6;
+
+}
+
+/* =====================================================
+   TOOL GRID
+===================================================== */
+
+.grid{
+
+  display:grid;
+
+  gap:18px;
+
+}
+
+.tool-card{
+
+  background:var(--surface);
+
+  border:1px solid var(--border);
+
+  border-radius:22px;
+
+  padding:22px;
+
+  cursor:pointer;
+
+  transition:
+
+  transform .22s,
+
+  border-color .22s,
+
+  box-shadow .22s;
+
+}
+
+.tool-card:hover{
+
+  transform:translateY(-3px);
+
+  border-color:var(--accent);
+
+  box-shadow:var(--shadow);
+
+}
+
+.tool-card.disabled{
+
+  opacity:.45;
+
+  cursor:not-allowed;
+
+}
+
+.tool-card.disabled:hover{
+
+  transform:none;
+
+  border-color:var(--border);
+
+  box-shadow:none;
+
+}
+
+.icon{
+
+  font-size:26px;
+
+  margin-bottom:10px;
+
+}
+
+.tool-title{
+
+  font-size:18px;
+
+  font-weight:600;
+
+}
+
+.tool-desc{
+
+  color:var(--muted);
+
+  margin-top:6px;
+
+  line-height:1.5;
+
+}
+
+label{
+
+  display:block;
+
+  margin-bottom:8px;
+
+  color:var(--muted);
+
+  font-size:14px;
+
+  font-weight:500;
+
+}
+
+input{
+
+  width:100%;
+
+  padding:15px;
+
+  font-size:16px;
+
+  color:var(--text);
+
+  background:var(--surface-2);
+
+  border:1px solid var(--border);
+
+  border-radius:16px;
+
+  outline:none;
+
+  transition:
+
+  border-color .2s,
+
+  box-shadow .2s,
+
+  transform .15s;
+
+}
+
+input::placeholder{
+
+  color:#94a3b8;
+
+}
+
+input:focus{
+
+  border-color:var(--accent);
+
+  box-shadow:
+
+  0 0 0 4px rgba(37,99,235,.12);
+
+}
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+button{
+
+  width:100%;
+
+  border:none;
+
+  border-radius:16px;
+
+  padding:16px;
+
+  margin-top:8px;
+
+  background:var(--accent);
+
+  color:white;
+
+  font-size:16px;
+
+  font-weight:600;
+
+  cursor:pointer;
+
+  transition:
+
+  background .2s,
+
+  transform .15s,
+
+  box-shadow .2s;
+
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 28px rgba(37,99,235,.22);
+}
+
+button:active {
+    transform: translateY(0px) scale(0.98);
+}
+
+/* =====================================================
+   RESULT CARD
+===================================================== */
+
+.result-card{
+
+  margin-top:26px;
+
+  padding:24px;
+
+  background:var(--surface-2);
+
+  border:1px solid var(--border);
+
+  border-radius:22px;
+
+  text-align:center;
+
+  opacity:0;
+
+  transform:translateY(8px) scale(0.98);
+
+  transition:
+
+  opacity .25s,
+
+  transform .25s;
+
+}
+
+.result-card.show{
+
+  opacity:1;
+
+  transform:translateY(0) scale(1);
+
+}
+
+.result{
+
+  font-size:48px;
+
+  font-weight:700;
+
+  letter-spacing:-2px;
+
+}
+
+.hint{
+
+  margin-top:8px;
+
+  color:var(--muted);
+
+  line-height:1.5;
+
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer{
+
+  margin-top:42px;
+
+  text-align:center;
+
+  color:var(--muted);
+
+  font-size:13px;
+
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width:640px){
+
+.app{
+
+padding:28px 18px 40px;
+
+}
+
+.hero h1{
+
+font-size:32px;
+
+}
+
+.brand{
+
+font-size:28px;
+
+}
+
+.card{
+
+padding:22px;
+
+}
+
+.result{
+
+font-size:40px;
+
+}
+
+}
+
+/* =====================================================
+   INPUT GROUPS
+===================================================== */
+
+.input-group {
+
+    position: relative;
+
+}
+
+.input-group input {
+
+    padding-right: 42px;
+
+}
+
+.input-group span {
+
+    position: absolute;
+
+    right: 16px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: var(--muted);
+
+    font-weight: 600;
+
+    pointer-events: none;
+
+}
+
+/* =====================================================
+   CALCULATOR CARD
+===================================================== */
+
+.card{
+
+  background:var(--surface);
+
+  border:1px solid var(--border);
+
+  border-radius:28px;
+
+  padding:30px;
+
+  box-shadow:var(--shadow);
+
+}
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.field{
+
+  margin-bottom:20px;
+
+}
+
+/* =====================================================
+   GPA CALCULATOR STYLES
+===================================================== */
+
+/* ---------- Dropdown Inputs ---------- */
+
+select {
+
+    width: 100%;
+
+    padding: 14px 16px;
+
+    border-radius: 14px;
+
+    border: 1px solid var(--border);
+
+    background: var(--surface);
+
+    color: var(--text);
+
+    font-size: 15px;
+
+    font-family: inherit;
+
+    outline: none;
+
+    transition:
+        border-color .2s ease,
+        box-shadow .2s ease,
+        transform .15s ease;
+
+    appearance: none;
+
+    cursor: pointer;
+
+}
+
+select:hover {
+
+    border-color: var(--accent);
+
+}
+
+select:focus {
+
+    border-color: var(--accent);
+
+    box-shadow: 0 0 0 4px rgba(37,99,235,.12);
+
+}
+
+/* ---------- Course List ---------- */
+
+.course-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+    margin-top:30px;
+
+}
+
+/* ---------- Individual Course Card ---------- */
+
+.course-card{
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+
+    padding:20px;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        border-color .2s ease;
+
+    animation:fadeUp .25s ease;
+
+}
+
+.course-card:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 14px 28px rgba(0,0,0,.08);
+
+    border-color:var(--accent);
+
+}
+
+/* ---------- Card Header ---------- */
+
+.course-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:18px;
+
+}
+
+.course-title{
+
+    font-size:19px;
+
+    font-weight:600;
+
+    color:var(--text);
+
+    letter-spacing:-0.4px;
+
+}
+
+/* ---------- Delete Button ---------- */
+
+.delete-btn{
+
+    width:36px;
+
+    height:36px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:transparent;
+
+    color:#ef4444;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.2s ease;
+
+}
+
+.delete-btn:hover{
+
+    background:rgba(239,68,68,.10);
+
+    transform:scale(1.08);
+
+}
+
+/* ---------- Grade + Credits ---------- */
+
+.course-details{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:16px;
+
+}
+
+.detail-box{
+
+    background:var(--bg);
+
+    border:1px solid var(--border);
+
+    border-radius:14px;
+
+    padding:14px;
+
+}
+
+.detail-label{
+
+    font-size:12px;
+
+    color:var(--muted);
+
+    margin-bottom:6px;
+
+    text-transform:uppercase;
+
+    letter-spacing:.8px;
+
+}
+
+.detail-value{
+
+    font-size:18px;
+
+    font-weight:600;
+
+    color:var(--text);
+
+}
+
+/* ---------- GPA Result Card ---------- */
+
+.result-label{
+
+    font-size:14px;
+
+    color:var(--muted);
+
+    margin-bottom:8px;
+
+}
+
+#gpaResult{
+
+    font-size:56px;
+
+    font-weight:700;
+
+    letter-spacing:-2px;
+
+    color:var(--accent);
+
+    margin-bottom:8px;
+
+}
+
+#gpaHint{
+
+    font-size:14px;
+
+    color:var(--muted);
+
+}
+
+/* ---------- Empty State ---------- */
+
+.empty-state{
+
+    text-align:center;
+
+    padding:50px 20px;
+
+    border:2px dashed var(--border);
+
+    border-radius:20px;
+
+    color:var(--muted);
+
+    font-size:15px;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(12px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width:700px){
+
+    .course-details{
+
+        grid-template-columns:1fr;
+
+    }
+
+    #gpaResult{
+
+        font-size:46px;
+
+    }
+
+}
+
+/* =====================================================
+   COLLEGE COST CALCULATOR STYLES
+===================================================== */
+
+/* ---------- Searchable Dropdown ---------- */
+
+.searchable-dropdown {
+
+    position: relative;
+
+}
+
+.searchable-dropdown input {
+
+    width: 100%;
+
+}
+
+.dropdown-list {
+
+    display: none;
+
+    position: absolute;
+
+    top: 100%;
+
+    left: 0;
+
+    right: 0;
+
+    margin-top: 8px;
+
+    background: var(--surface-2);
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    box-shadow: var(--shadow);
+
+    max-height: 300px;
+
+    overflow-y: auto;
+
+    z-index: 1000;
+
+}
+
+.dropdown-list.active {
+
+    display: block;
+
+}
+
+.dropdown-item {
+
+    padding: 12px 16px;
+
+    cursor: pointer;
+
+    border-bottom: 1px solid var(--border);
+
+    transition: background .15s;
+
+}
+
+.dropdown-item:last-child {
+
+    border-bottom: none;
+
+}
+
+.dropdown-item:hover:not(.disabled) {
+
+    background: var(--surface);
+
+}
+
+.dropdown-item.disabled {
+
+    cursor: not-allowed;
+
+    color: var(--muted);
+
+}
+
+.college-name {
+
+    font-weight: 600;
+
+    color: var(--text);
+
+    font-size: 15px;
+
+}
+
+.college-location {
+
+    font-size: 13px;
+
+    color: var(--muted);
+
+    margin-top: 4px;
+
+}
+
+.highlight {
+
+    color: var(--accent);
+
+    font-weight: 600;
+
+}
+
+/* ---------- College Info Display ---------- */
+
+.college-info {
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: 16px;
+
+    padding: 16px;
+
+    margin-bottom: 20px;
+
+}
+
+.college-info.hidden {
+
+    display: none;
+
+}
+
+.info-item {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+.info-item .label {
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+}
+
+.info-item .value {
+
+    font-weight: 600;
+
+    color: var(--text);
+
+}
+
+/* ---------- Button Groups (Toggle Buttons) ---------- */
+
+.button-group {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
+    gap: 10px;
+
+    margin-top: 10px;
+
+}
+
+.toggle-btn {
+
+    background: var(--surface);
+
+    color: var(--text);
+
+    border: 2px solid var(--border);
+
+    border-radius: 12px;
+
+    padding: 12px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all .2s;
+
+    margin-top: 0;
+
+    width: 100%;
+
+}
+
+.toggle-btn:hover {
+
+    border-color: var(--accent);
+
+    box-shadow: none;
+
+    transform: none;
+
+}
+
+.toggle-btn.active {
+
+    background: var(--accent);
+
+    color: white;
+
+    border-color: var(--accent);
+
+}
+
+.toggle-btn.active:hover {
+
+    box-shadow: 0 8px 20px rgba(37,99,235,.2);
+
+    transform: translateY(-2px);
+
+}
+
+/* ---------- Cost Breakdown ---------- */
+
+.cost-breakdown {
+
+    margin-top: 24px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid var(--border);
+
+}
+
+.breakdown-item {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 10px 0;
+
+    font-size: 15px;
+
+}
+
+.breakdown-item.hidden {
+
+    display: none;
+
+}
+
+.breakdown-label {
+
+    color: var(--muted);
+
+    font-weight: 500;
+
+}
+
+.breakdown-value {
+
+    font-weight: 600;
+
+    color: var(--text);
+
+}
+
+/* ---------- Hidden Utility ---------- */
+
+.hidden {
+
+    display: none !important;
+
+}
+
+/* ---------- Mobile Dropdown ---------- */
+
+@media (max-width: 640px) {
+
+    .dropdown-list {
+
+        max-height: 250px;
+
+    }
+
+    .button-group {
+
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+}

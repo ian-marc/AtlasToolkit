@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- ===============================================
+         Atlas Toolkit v1.0
+         Template Page Structure
+         
+         Copy this as a starting point for new pages.
+         Replace [PAGE_TITLE], [PAGE_DESC], and [TOOL_NAME]
+    =============================================== -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>[PAGE_TITLE] | Atlas Toolkit</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Main stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+
+</head>
+
+<body>
+
+    <!-- Navbar Container (populated by navbar.js) -->
+    <div id="navbar-container"></div>
+
+    <!-- Main App Container -->
+    <div class="app">
+
+        <!-- Page Header / Hero Section -->
+        <section class="hero">
+            <h1>[TOOL_NAME]</h1>
+            <p>[PAGE_DESC]</p>
+        </section>
+
+        <!-- Main Content (customize per page) -->
+        <section class="card">
+            <!-- Add your content here -->
+        </section>
+
+        <!-- Footer Container (populated by main.js) -->
+        <div id="footer"></div>
+
+    </div>
+
+    <!-- ===============================================
+         SCRIPT LOADING ORDER (Important!)
+         
+         1. components.js - defines NAVBAR, FOOTER, VERSION
+         2. navbar.js - handles navbar initialization
+         3. validators.js - shared validation utilities
+         4. page-init.js - page initialization utilities
+         5. main.js - general page logic
+         6. [page].js - page-specific logic (final.js, gpa.js, etc.)
+    =============================================== -->
+
+    <script src="js/components.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/utils/validators.js"></script>
+    <script src="js/utils/page-init.js"></script>
+    <script src="js/main.js"></script>
+    <!-- ADD YOUR PAGE-SPECIFIC SCRIPT HERE -->
+
+</body>
+
+</html>

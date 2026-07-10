@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- ===============================================
+         Atlas Toolkit v1.0
+         File: tuition.html
+
+         College Cost Calculator
+    =============================================== -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>College Cost Calculator | Atlas Toolkit</title>
+    <meta name="description" content="Estimate your total college costs with Atlas Toolkit's free college cost calculator. Compare tuition, housing, fees, and expenses to plan your education budget.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../../assets/images/favicon-288x288.png">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Main stylesheets -->
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/navbar.css">
+
+</head>
+
+<body>
+
+    <!-- Navbar Container (populated by navbar.js) -->
+    <div id="navbar-container"></div>
+
+    <!-- Main App Container -->
+    <div class="app">
+
+        <!-- Page Header / Hero Section -->
+        <section class="hero">
+            <h1>College Cost Calculator</h1>
+            <p>Search for your college and calculate your total cost based on tuition, fees, and room & board.</p>
+        </section>
+
+        <!-- Main Calculator -->
+        <section class="card">
+
+            <!-- College Search -->
+            <div class="field">
+                <label>College / University</label>
+                <div class="searchable-dropdown">
+                    <input 
+                        id="collegeSearch"
+                        type="text"
+                        placeholder="Start typing to search...">
+                    <div id="collegeDropdown" class="dropdown-list">
+                        <!-- Dropdown items populated by JS -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tuition Type Selection -->
+            <div id="tuitionTypeContainer" class="field hidden">
+                <label>Tuition Type</label>
+                <div class="button-group">
+                    <button class="toggle-btn active" onclick="selectTuitionType('inState')">
+                        In-State
+                    </button>
+                    <button class="toggle-btn" onclick="selectTuitionType('outState')">
+                        Out-of-State
+                    </button>
+                    <button class="toggle-btn" onclick="selectTuitionType('international')">
+                        International
+                    </button>
+                </div>
+            </div>
+
+            <!-- Room & Board Toggle -->
+            <div id="roomBoardContainer" class="field hidden">
+                <label>Include Room & Board?</label>
+                <div class="button-group">
+                    <button class="toggle-btn active" onclick="toggleRoomBoard(true)">
+                        Yes
+                    </button>
+                    <button class="toggle-btn" onclick="toggleRoomBoard(false)">
+                        No
+                    </button>
+                </div>
+            </div>
+
+            <!-- Calculate Button -->
+            <button id="calculateBtn" onclick="calculateTuition()" class="hidden">
+                Calculate Cost
+            </button>
+
+        </section>
+
+        <!-- Cost Breakdown Result -->
+        <section id="resultCard" class="result-card">
+            <div class="result-label">Estimated Annual Cost</div>
+            <div id="totalCost" class="result">--</div>
+            
+            <div class="cost-breakdown">
+                <div class="breakdown-item">
+                    <span class="breakdown-label">Tuition:</span>
+                    <span id="tuitionCost" class="breakdown-value">--</span>
+                </div>
+                <div class="breakdown-item">
+                    <span class="breakdown-label">Fees:</span>
+                    <span id="feesCost" class="breakdown-value">--</span>
+                </div>
+                <div class="breakdown-item" id="roomBoardItem">
+                    <span class="breakdown-label">Room & Board:</span>
+                    <span id="roomBoardCost" class="breakdown-value">--</span>
+                </div>
+            </div>
+
+            <div id="tuitionHint" class="hint"></div>
+        </section>
+
+        <!-- Back Button -->
+        <div style="margin-top:24px; text-align:center;">
+            <button onclick="window.location.href='../../index.html'" style="max-width:220px;">
+                ← Back to Home
+            </button>
+        </div>
+
+        <!-- Footer Container -->
+        <div id="footer"></div>
+
+    </div>
+
+    <!-- ===============================================
+         SCRIPT LOADING ORDER
+    =============================================== -->
+
+    <script src="../../js/components.js"></script>
+    <script src="../../js/navbar.js"></script>
+    <script src="../../js/utils/validators.js"></script>
+    <script src="../../js/utils/page-init.js"></script>
+    <script src="../../js/main.js"></script>
+    <script src="../../js/tuition.js"></script>
+
+</body>
+
+</html>

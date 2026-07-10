@@ -13,7 +13,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Atlas Toolkit</title>
+    <title>Atlas Toolkit | Free Student Tools & Resources</title>
+    <meta name="description" content="Atlas Toolkit provides free student tools, calculators, and resources designed to make school easier. Explore tools built for students.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/images/favicon-288x288.png">
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,79 +25,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Main stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
 
 </head>
 
 <body>
 
-        <!-- ===============================================
-         NAVIGATION BAR
-         =============================================== -->
+    <div id="navbar-container"></div>
 
-<div class="navbar">
-
-    <!-- Left: Brand -->
-    <div class="nav-brand" onclick="window.location.href='index.html'">
-        Atlas Toolkit
-    </div>
-
-    <!-- Right: Dropdowns -->
-    <div class="nav-right">
-
-        <div class="dropdown">
-
-            <div class="dropdown-title"
-                onclick="toggleDropdown(this)">
-                Tools ▼
-            </div>
-
-            <div class="dropdown-menu">
-
-                <div class="dropdown-item"
-                    onclick="window.location.href='final.html'">
-
-                    Final Grade Calculator
-
-                </div>
-
-                <div class="dropdown-item"
-                    onclick="window.location.href='gpa.html'">
-
-                    Semester GPA Calculator
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="dropdown">
-
-            <div class="dropdown-title"
-                onclick="toggleDropdown(this)">
-                Resources ▼
-            </div>
-
-            <div class="dropdown-menu">
-
-                <div class="dropdown-item">
-                    Study Tips
-                </div>
-
-                <div class="dropdown-item">
-                    Guides
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
-<div class="app">
+    <div class="app">
 
     <!-- ===============================================
          HERO
@@ -168,44 +108,32 @@
              Tuition Calculator
              =========================== -->
 
-        <div class="tool-card disabled">
+        
+        <div class="tool-card" onclick="openTool('tuition')">
 
-            <div class="icon">
-                💰
-            </div>
-
-            <div class="tool-title">
-                Tuition Calculator
-            </div>
-
+            <div class="icon">🏫</div>
+            <div class="tool-title">College Cost Calculator</div>
             <div class="tool-desc">
-                Estimate tuition and housing costs.
+                Estimate total college cost by school.
             </div>
 
         </div>
+
+</section>
 
 
     </section>
 
 
-    <!-- ===============================================
-         FOOTER
-         =============================================== -->
-
-    <footer class="footer">
-
-        Atlas Toolkit
-
-        <br><br>
-
-        Version 1.0.0
-
-    </footer>
+    <!-- Footer Component -->
+<div id="footer"></div>
 
 </div>
 
 <!-- JavaScript -->
-<script src="script.js"></script>
+ <script src="js/components.js"></script>
+<script src="js/navbar.js"></script>
+<script src="js/main.js"></script>
 
 </body>
 

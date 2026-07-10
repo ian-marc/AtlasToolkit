@@ -1,0 +1,33 @@
+/* =====================================================
+   CALCULATOR CARD
+===================================================== */
+
+.card{
+
+  background:var(--surface);
+
+  border:1px solid var(--border);
+
+  border-radius:28px;
+
+  padding:30px;
+
+  box-shadow:var(--shadow);
+
+}
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.field{
+
+  margin-bottom:20px;
+
+}.result-card.show{
+
+  opacity:1;
+
+  transform:translateY(0) scale(1);
+
+}
