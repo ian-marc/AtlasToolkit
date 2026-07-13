@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QW2CPFC7QR"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-QW2CPFC7QR');
+</script>
+
+<!-- ==================================================
+     Atlas Toolkit v1.0
+     File: study.html
+
+     Study Time Calculator
+=================================================== -->
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>
+Study Time Calculator | Atlas Toolkit
+</title>
+
+<meta name="description"
+content="Estimate how many hours you should study each day or week based on your courses, exam date, and target grade using Atlas Toolkit's free Study Time Calculator.">
+
+<link rel="icon"
+type="image/png"
+href="../../assets/images/favicon-288x288.png">
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="../../css/style.css">
+
+<link rel="stylesheet"
+href="../../css/navbar.css">
+
+</head>
+
+<body>
+
+<div id="navbar-container"></div>
+
+<div class="app">
+
+<!-- HERO -->
+
+<section class="hero">
+
+<h1>
+
+Study Time Calculator
+
+</h1>
+
+<p>
+
+Estimate how many hours you should study each day to reach your academic goals.
+
+</p>
+
+</section>
+
+<!-- CALCULATOR -->
+
+<section class="card">
+
+<!-- Credits -->
+
+<div class="field">
+
+<label>Credit Hours</label>
+
+<div class="input-group">
+
+<input
+id="credits"
+type="number"
+placeholder="e.g. 4">
+
+</div>
+
+</div>
+
+<!-- Difficulty -->
+
+<div class="field">
+
+<label>Course Difficulty</label>
+
+<select id="difficulty">
+
+<option value="1">Easy</option>
+<option value="1.25" selected>Medium</option>
+<option value="1.5">Hard</option>
+
+</select>
+
+</div>
+
+<!-- Current Grade -->
+
+<div class="field">
+
+<label>Current Grade</label>
+
+<div class="input-group">
+
+<input
+id="current"
+type="number"
+placeholder="e.g. 84">
+
+<span>%</span>
+
+</div>
+
+</div>
+
+<!-- Target Grade -->
+
+<div class="field">
+
+<label>Target Grade</label>
+
+<div class="input-group">
+
+<input
+id="target"
+type="number"
+placeholder="e.g. 90">
+
+<span>%</span>
+
+</div>
+
+</div>
+
+<!-- Days Until Exam -->
+
+<div class="field">
+
+<label>Days Until Exam</label>
+
+<div class="input-group">
+
+<input
+id="days"
+type="number"
+placeholder="e.g. 18">
+
+</div>
+
+</div>
+
+<button onclick="calculateStudyTime()">
+
+Calculate
+
+</button>
+
+<!-- RESULTS -->
+
+<div
+class="result-card"
+id="resultCard">
+
+<div
+class="result"
+id="result">
+
+--
+
+</div>
+
+<div
+class="hint"
+id="hint">
+
+Fill in the fields above to begin.
+
+</div>
+
+</div>
+
+</section>
+
+<!-- BACK BUTTON -->
+
+<div
+style="
+margin-top:24px;
+text-align:center;
+">
+
+<button
+onclick="window.location.href='../../index.html'"
+style="max-width:220px;">
+
+← Back to Home
+
+</button>
+
+</div>
+
+<div id="footer"></div>
+
+</div>
+
+<script src="../../js/components.js?v=20260713"></script>
+<script src="../../js/navbar.js?v=20260713"></script>
+<script src="../../js/utils/validators.js"></script>
+<script src="../../js/utils/page-init.js"></script>
+<script src="../../js/main.js"></script>
+<script src="../../js/study.js"></script>
+
+</body>
+
+</html>

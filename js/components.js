@@ -9,7 +9,7 @@
    WEBSITE VERSION
 ===================================================== */
 
-const VERSION = "1.0.1";
+const VERSION = "1.1.0";
 
 
 /* =====================================================
@@ -91,6 +91,20 @@ if (isCalculator || isCompany) {
                      onclick="window.location.href='${basePath}tuition.html'">
 
                     Tuition Calculator
+
+                </div>
+
+                <div class="dropdown-item"
+                     onclick="window.location.href='${basePath}study.html'">
+
+                    Study Time Calculator
+
+                </div>
+
+                <div class="dropdown-item"
+                     onclick="window.location.href='${basePath}loans.html'">
+
+                    Loan Calculator
 
                 </div>
 

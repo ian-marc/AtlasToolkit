@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-
 /* =====================================================
    DROPDOWN LOGIC
 ===================================================== */
@@ -43,40 +42,75 @@ function initDropdowns() {
 
     });
 
-    document.addEventListener("click", () => {
-
-        document.querySelectorAll(".dropdown")
-            .forEach(d => d.classList.remove("active"));
-
-    });
+    document.addEventListener("click", closeDropdowns);
+    document.addEventListener("keydown", handleEscape);
 
     setActiveNav();
 
 }
 
+function closeDropdowns() {
+    document.querySelectorAll(".dropdown")
+        .forEach(d => d.classList.remove("active"));
+}
+
+function handleEscape(event) {
+    if (event.key === "Escape") {
+        closeDropdowns();
+    }
+}
+
 function setActiveNav() {
 
-    const path = window.location.pathname;
-
-    const toolDropdown = document.querySelectorAll(".dropdown-title")[0];
     const brand = document.querySelector(".nav-brand");
+    const dropdownTitles = document.querySelectorAll(".dropdown-title");
+    const tools = dropdownTitles[0];
+    const guides = dropdownTitles[1];
+    const company = dropdownTitles[2];
 
-    if (!toolDropdown || !brand) return;
+    if (!brand && dropdownTitles.length === 0) return;
 
-    // reset
-    toolDropdown.classList.remove("nav-active");
-    brand.classList.remove("nav-active");
+    [brand, tools, guides, company].filter(Boolean).forEach(el => {
+        el.classList.remove("nav-active");
+    });
 
-    // HOME
-    if (path.includes("index.html") || path === "/") {
-        brand.classList.add("nav-active");
+    const path = (window.location.pathname || "/").toLowerCase();
+    const normalizedPath = path.replace(/\/+$/, "") || "/";
+    const pageName = normalizedPath.split("/").pop() || "index.html";
+
+    if (normalizedPath === "/" || pageName === "index.html") {
+        brand?.classList.add("nav-active");
+        return;
     }
 
-    // TOOL PAGES
-    const toolPages = ["final.html", "gpa.html"];
+    const toolPages = [
+        "final.html",
+        "gpa.html",
+        "tuition.html",
+        "study.html",
+        "loans.html"
+    ];
 
-    if (toolPages.some(page => path.includes(page))) {
-        toolDropdown.classList.add("nav-active");
+    const guidesPages = [
+        "buying-guides.html",
+        "best-laptops.html"
+    ];
+
+    const companyPages = [
+        "about.html",
+        "contact.html",
+        "privPolicy.html",
+        "termsService.html"
+    ];
+
+    if (toolPages.includes(pageName)) {
+        tools?.classList.add("nav-active");
+    } else if (guidesPages.includes(pageName)) {
+        guides?.classList.add("nav-active");
+    } else if (companyPages.includes(pageName)) {
+        company?.classList.add("nav-active");
+    } else if (brand) {
+        brand.classList.add("nav-active");
     }
 
 }
@@ -159,7 +193,9 @@ function setActiveNav() {
     const toolPages = [
         "final.html",
         "gpa.html",
-        "tuition.html"
+        "tuition.html",
+        "study.html",
+        "loans.html"
     ];
 
     // Highlight Tools if we're on any tool page

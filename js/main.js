@@ -31,6 +31,14 @@ function openTool(tool) {
             window.location.href = "html/calculators/tuition.html";
             break;
 
+        case "study":
+            window.location.href = "html/calculators/study.html";
+            break;
+
+        case "loans":
+            window.location.href = "html/calculators/loans.html";
+            break;
+
         default:
             console.log("Tool not found.");
 
